@@ -35,7 +35,6 @@ A few decisions I'm glad I made:
 
 - Static HTML on Cloudflare Pages
 - One Cloudflare Worker: proxies Claude with structured JSON output, creates and verifies Razorpay payments, sends email through Brevo, and stores state in Cloudflare KV
-- About five US cents of API spend per run
 
 ## What's in this repository
 
