@@ -29,7 +29,6 @@ A few decisions I'm glad I made:
 - **A one time access token,** minted only after a server side payment check and consumed the moment the report sends. One payment, one report.
 - **A `/version` endpoint,** so I can verify which build is live from my phone.
 - **A server side prompt.** The taxonomy and diagnosis logic live in the Worker. View source on the page shows nothing worth copying.
-- **A manual fallback.** If generation fails, the answers route to me with reply to set to the founder, without consuming their token, so a paying founder never falls into a void.
 
 ## What it runs on
 
