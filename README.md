@@ -33,7 +33,7 @@ A few decisions I'm glad I made:
 ## What it runs on
 
 - Static HTML on Cloudflare Pages
-- One Cloudflare Worker: proxies Claude with structured JSON output, creates and verifies Razorpay payments, sends email through Brevo, and stores state in Cloudflare KV
+- One Cloudflare Worker: proxies the model with structured JSON output, creates and verifies Razorpay payments, sends email through Brevo, and stores state in Cloudflare KV
 
 ## What's in this repository
 
