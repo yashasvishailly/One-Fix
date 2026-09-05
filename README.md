@@ -1,6 +1,6 @@
 # One Fix
 
-A paid founder diagnostic. Ten questions in a chat interface, about a minute of wait, and a scored nine section report comes back that names the execution pattern a company is stuck in and hands over a prioritized fix list. Built on Claude, running on a single Cloudflare Worker. 
+A paid founder diagnostic. Ten questions in a chat interface, about a minute of wait, and a scored nine section report comes back that names the execution pattern a company is stuck in and hands over a prioritized fix list. Built for structured diagnosis, running on a single Cloudflare Worker. 
 
 Live: https://yashasvishailly.com/diagnose
 Teardown: https://yashasvishailly.com/blog/the-one-fix-breakdown
@@ -9,7 +9,7 @@ Teardown: https://yashasvishailly.com/blog/the-one-fix-breakdown
 
 Every consulting engagement I run opens the same way. A founder names a symptom, and the first hour is me walking them from the symptom to the actual cause. That walk has a fixed shape, so I built it.
 
-It started in April 2026 as a plain form that emailed me answers I diagnosed by hand. In May I rebuilt it around Claude, and the wait from answering to knowing dropped from days to about a minute. Since then it has grown into a scored nine section diagnosis across execution, operations, decision making, people, and org design, with an eight pattern taxonomy underneath that names the dominant pattern and attaches a confidence level.
+It started in April 2026 as a plain form that emailed me answers I diagnosed by hand. In May I rebuilt it around a tighter decision flow, and the wait from answering to knowing dropped from days to about a minute. Since then it has grown into a scored nine section diagnosis across execution, operations, decision making, people, and org design, with an eight pattern taxonomy underneath that names the dominant pattern and attaches a confidence level.
 
 I built and debugged every piece myself: the diagnosis engine, the payment gate, the email, the permalinks, and the failure paths.
 
@@ -41,4 +41,4 @@ A case study and the system architecture. See `ARCHITECTURE.md`. The product sta
 
 ## Who built it
 
-Yashasvi Shailly, an operator with eight years inside early to growth stage startups. One Fix is the first hour of that consulting conversation, compressed to about a minute and built on Claude.
+Yashasvi Shailly, an operator with eight years inside early to growth stage startups. One Fix is the first hour of that consulting conversation, compressed to about a minute and built for structured diagnosis.
