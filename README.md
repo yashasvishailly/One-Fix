@@ -1,6 +1,6 @@
 # One Fix
 
-A paid founder diagnostic. Ten questions in a chat interface, about a minute of wait, and a scored nine section report comes back that names the execution pattern a company is stuck in and hands over a prioritized fix list. Built for structured diagnosis, running on a single Cloudflare Worker. 
+A paid founder diagnostic. Eight core questions in a chat interface, with up to two targeted follow-ups, about a minute of wait, and a scored nine section report comes back that names the execution pattern a company is stuck in and hands over a prioritized fix list. Built for structured diagnosis, running on a single Cloudflare Worker. 
 
 Live: https://yashasvishailly.com/diagnose
 Teardown: https://yashasvishailly.com/blog/the-one-fix-breakdown
@@ -15,7 +15,7 @@ I built and debugged every piece myself: the diagnosis engine, the payment gate,
 
 ## The eight patterns
 
-The engine reads all ten answers together and names the dominant execution pattern from a taxonomy I built out of eight years of watching companies get stuck. A few of them: Founder Gravity, where everything routes through the founder. The Orphaned Middle, a middle layer that was hired and never given real authority. The Consensus Tax, where decisions wait for an agreement that never comes. The full set and the reasoning are in the teardown.
+The engine reads the founder's answers together and names the dominant execution pattern from a taxonomy I built out of eight years of watching companies get stuck. A few of them: Founder Gravity, where everything routes through the founder. The Orphaned Middle, a middle layer that was hired and never given real authority. The Consensus Tax, where decisions wait for an agreement that never comes. The full set and the reasoning are in the teardown.
 
 Naming the pattern mattered more than the score. Founders argue with a score. They go quiet when a pattern gets named, because a name means someone has seen it before, which means it's real and fixable.
 
@@ -37,7 +37,7 @@ A few decisions I'm glad I made:
 
 ## What's in this repository
 
-A case study and the system architecture. See `ARCHITECTURE.md`. The product stays private. The ten questions, the system prompt, the scoring, and the fix list content are what people pay for, so they are not here.
+A case study and the system architecture. See `ARCHITECTURE.md`. The product stays private. The core questions and targeted follow-ups, the system prompt, the scoring, and the fix list content are what people pay for, so they are not here.
 
 ## Who built it
 
