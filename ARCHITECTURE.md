@@ -25,7 +25,9 @@ A static front end and a single Cloudflare Worker. The Worker does everything th
 3. The tool checks that access and retrieves its base questions from the Worker. When needed, it asks a short follow-up round based on the answers.
 4. The generate call carries the session token. The Worker composes the prompt and returns a structured diagnosis.
 5. The report is stored at an unguessable link and the delivery flow records the session's report URL. Returning with a completed session can reopen that report.
-6. Email delivery sends a summary and a link to the saved report. Failure and retry behavior is handled by the server and the tool rather than treating a temporary access-check outage as proof of unpaid access.
+6. Email delivery sends a summary and a link to the saved report.
+
+Website recovery changes remain proposed in [website PR #116](https://github.com/yashasvishailly/yashasvishailly-com/pull/116). That branch retains answers and offers a retry during access-check outages without asking for another payment. Backend 402 responses mean the access link is invalid or expired and receive a separate explanation. These changes are unmerged; this case study does not claim they are deployed.
 
 ## Design choices
 
@@ -41,4 +43,4 @@ The gate flag has to agree in three places: a constant in the Worker, a variable
 
 ## Held back
 
-The ten questions, the system prompt, the eight pattern logic, the scoring, and the fix list content are proprietary and are not in this repository.
+The eight core questions and up to two targeted follow-ups, the system prompt, the eight pattern logic, the scoring, and the fix list content are proprietary and are not in this repository.
