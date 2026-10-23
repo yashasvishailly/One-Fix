@@ -1,6 +1,6 @@
 # One Fix
 
-A paid founder diagnostic. Eight core questions in a chat interface, with up to two targeted follow-ups, about a minute of wait, and a scored nine section report comes back that names the execution pattern a company is stuck in and hands over a prioritized fix list. Built for structured diagnosis, running on a single Cloudflare Worker. 
+A paid founder diagnostic. Seven questions in a chat interface, about a minute of wait, and a scored nine section report comes back that names the execution pattern a company is stuck in and hands over a prioritized fix list. Built for structured diagnosis, running on a single Cloudflare Worker. 
 
 Live: https://yashasvishailly.com/diagnose
 Teardown: https://yashasvishailly.com/blog/the-one-fix-breakdown
