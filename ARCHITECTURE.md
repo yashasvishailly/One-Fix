@@ -16,7 +16,7 @@ A static front end and a single Cloudflare Worker. The Worker does everything th
 
 ## Request flow
 
-1. A founder answers ten questions, one at a time, in a chat interface on the static page.
+1. A founder answers seven questions, one at a time, in a chat interface on the static page.
 2. The page calls the Worker to create a Razorpay order. Razorpay handles checkout.
 3. The Worker verifies the payment signature server side, then mints a one time access token.
 4. The gated generate call carries that token. The Worker composes the prompt from the answers and generates a structured diagnosis.
@@ -37,4 +37,4 @@ The gate flag has to agree in three places: a constant in the Worker, a variable
 
 ## Held back
 
-The ten questions, the system prompt, the eight pattern logic, the scoring, and the fix list content are proprietary and are not in this repository.
+The seven questions, the system prompt, the eight pattern logic, the scoring, and the fix list content are proprietary and are not in this repository.
