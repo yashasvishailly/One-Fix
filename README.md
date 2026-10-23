@@ -1,6 +1,8 @@
 # One Fix
 
-A paid founder diagnostic. Eight core questions in a chat interface, with up to two targeted follow-ups, about a minute of wait, and a scored nine section report comes back that names the execution pattern a company is stuck in and hands over a prioritized fix list. Built for structured diagnosis, running on a single Cloudflare Worker. 
+A paid founder diagnostic. A verified purchase opens eight core questions in a chat interface, with up to two targeted follow-ups. About a minute later, a scored nine section report names the execution pattern a company is stuck in and hands over a prioritized fix list. Built for structured diagnosis, running on a single Cloudflare Worker.
+
+Current flow checked against the private source on 22 October 2026. This case study does not establish which version is deployed.
 
 Live: https://yashasvishailly.com/diagnose
 Teardown: https://yashasvishailly.com/blog/the-one-fix-breakdown
@@ -26,14 +28,14 @@ The diagnosis engine, the part people would call the AI, was maybe a fifth of th
 A few decisions I'm glad I made:
 
 - **Permalinks for a paid artifact.** Every report is stored and served at its own unguessable link with no expiry, so the thing you bought outlives the email.
-- **A one time access token,** minted only after a server side payment check and consumed the moment the report sends. One payment, one report.
+- **A paid access token,** issued after verified payment or authorized redemption and checked by the server throughout the diagnostic. One payment, one report.
 - **A `/version` endpoint,** so I can verify which build is live from my phone.
 - **A server side prompt.** The taxonomy and diagnosis logic live in the Worker. View source on the page shows nothing worth copying.
 
 ## What it runs on
 
-- Static HTML on Cloudflare Pages
-- One Cloudflare Worker: proxies the model with structured JSON output, creates and verifies Razorpay payments, sends email through Brevo, and stores state in Cloudflare KV
+- Static HTML on Cloudflare Pages, prepared by the repository build script
+- One Cloudflare Worker: proxies the model with structured JSON output, verifies Razorpay payments and Dodo webhooks, sends email through Brevo, and stores sessions and reports in Cloudflare KV. Shared durable claims protect redemption and delivery operations
 
 ## What's in this repository
 
